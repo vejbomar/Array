@@ -271,7 +271,9 @@ public:
 		// Post-increment
 		iterator operator++ (int)
 		{
-			return ptr++;
+			iterator tmp(ptr);
+			++ptr;
+			return tmp;
 		}
 
 		bool operator==(const iterator& other) const
